@@ -1,0 +1,12 @@
+.text-box h4 {
+  text-indent: 50px; }
+
+.text-box input {
+  border: 1px solid #666; }
+  .text-box input:focus {
+    box-shadow: 0 0 6px #2ad;
+    border-color: #2ad; }
+
+.text-box p {
+  color: #333;
+  font-size: 24px; }
