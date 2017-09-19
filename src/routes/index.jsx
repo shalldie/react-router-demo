@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
-export default class AppRoutes extends Component {
-    static propTypes = {
-        App: PropTypes.object.isRequired
-    }
+import CoreLayout from '../layout/CoreLayout';
+import Home from './Home';
+import PageNotFound from './PageNotFound';
 
-    render() {
-        return (
-            <Route component={this.props.App}>
 
-            </Route>
 
-        );
-    }
-}
+const BasicRoutes = () => (
+    <Router>
+        <CoreLayout>
+            <Switch>
+                <Route component={PageNotFound} />
+            </Switch>
+        </CoreLayout>
+    </Router>
+);
+
+export default BasicRoutes;
+
+const routesDemo = () => (
+    <Router>
+
+    </Router>
+);
