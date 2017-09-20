@@ -17,7 +17,7 @@ export default class CoreLayout extends Component {
     }
     render() {
         return (
-            <Layout className="core-layout" style={{ minHeight: '100vh' }}>
+            <Layout className="core-layout">
                 <Sider collapsible
                     collapsed={this.state.collapsed}
                     onCollapse={this.onCollapse}>
