@@ -10,6 +10,10 @@ export default class NavigatorView extends Component {
             link: '/home',
             icon: 'pie-chart',
             lbl: 'Home'
+        }, {
+            link: '/todolist',
+            icon: '',
+            lbl: 'TodoList'
         }]
     }
 
@@ -26,7 +30,7 @@ export default class NavigatorView extends Component {
                                     <Icon className="nav-view-item-icon" type={item.icon} />
                                 </div>
                                 <div className="nav-view-item back-side">
-                                    {item.lbl}
+                                    <h4>{item.lbl}</h4>
                                 </div>
                             </div>
                         </Link>

@@ -11,11 +11,13 @@ import PageNotFound from './PageNotFound';
 const BasicRoutes = () => (
     <Router>
         <CoreLayout>
-            <Switch>
-                <Route path="/" exact component={NavigatorView} />
-                <Route path="/home" component={Home} />
-                <Route component={PageNotFound} />
-            </Switch>
+            <Route path="/">
+                <Switch>
+                    <Route path="/" exact component={NavigatorView} />
+                    <Route path="home" component={Home} />
+                    <Route component={PageNotFound} />
+                </Switch>
+            </Route>
         </CoreLayout>
     </Router>
 );
