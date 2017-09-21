@@ -30,12 +30,6 @@ export default class CoreLayout extends Component {
                                 <span>Home</span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="2">
-                            <Link to="/about">
-                                <Icon type="desktop" />
-                                <span>About</span>
-                            </Link>
-                        </Menu.Item>
                         <SubMenu
                             key="sub1"
                             title={<span><Icon type="switcher" /><span>TodoList</span></span>}
@@ -44,17 +38,6 @@ export default class CoreLayout extends Component {
                             <Menu.Item key="4">Bill</Menu.Item>
                             <Menu.Item key="5">Alex</Menu.Item>
                         </SubMenu>
-                        <SubMenu
-                            key="sub2"
-                            title={<span><Icon type="team" /><span>Team</span></span>}
-                        >
-                            <Menu.Item key="6">Team 1</Menu.Item>
-                            <Menu.Item key="8">Team 2</Menu.Item>
-                        </SubMenu>
-                        <Menu.Item key="9">
-                            <Icon type="file" />
-                            <span>File</span>
-                        </Menu.Item>
                     </Menu>
                 </Sider>
                 <Layout>
