@@ -7,18 +7,22 @@ import Home from './Home';
 import TodoList from './TodoList';
 import PageNotFound from './PageNotFound';
 
-
+const routerHook = () => {
+    console.log('hello world');
+};
 
 const BasicRoutes = () => (
     <Router>
-        <CoreLayout>
-            <Switch>
-                <Route path="/" exact component={NavigatorView} />
-                <Route path="/home" component={Home} />
-                <Route path="/todolist" component={TodoList} />
-                <Route component={PageNotFound} />
-            </Switch>
-        </CoreLayout>
+        <Route path="/" onEnter={routerHook}>
+            <CoreLayout>
+                <Switch>
+                    <Route path="/" exact component={NavigatorView} onEnter={routerHook} />
+                    <Route path="/home" component={Home} />
+                    <Route path="/todolist" component={TodoList} />
+                    <Route component={PageNotFound} />
+                </Switch>
+            </CoreLayout>
+        </Route>
     </Router>
 );
 
