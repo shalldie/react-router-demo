@@ -10,10 +10,13 @@ import nprogress from 'nprogress';
 
 import 'nprogress/nprogress.css';
 
-const routerHook = () => {
-    console.log('hello world');
-};
 
+/**
+ * 路由钩子
+ * 
+ * @class RouterHook
+ * @extends {Component}
+ */
 class RouterHook extends Component {
 
     constructor(props) {
