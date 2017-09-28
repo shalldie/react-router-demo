@@ -1,19 +1,44 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch, withRouter } from 'react-router-dom';
 
 import CoreLayout from '../layout/CoreLayout';
 import NavigatorView from './NavigatorView';
 import Home from './Home';
 import TodoList from './TodoList';
 import PageNotFound from './PageNotFound';
+import nprogress from 'nprogress';
+
+import 'nprogress/nprogress.css';
 
 const routerHook = () => {
     console.log('hello world');
 };
 
+class RouterHook extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.props.history.listen((location, action) => {
+            nprogress.start();
+            nprogress.done();
+        });
+    }
+
+    render() {
+        return (
+            this.props.children
+        );
+    }
+}
+
+let RouterHookView = withRouter(RouterHook);
+
 const BasicRoutes = () => (
     <Router>
-        <Route path="/" onEnter={routerHook}>
+        {/* 给路由加一层hook */}
+        <RouterHookView>
+            {/* 页面外部容器 */}
             <CoreLayout>
                 <Switch>
                     <Route path="/" exact component={NavigatorView} onEnter={routerHook} />
@@ -22,7 +47,7 @@ const BasicRoutes = () => (
                     <Route component={PageNotFound} />
                 </Switch>
             </CoreLayout>
-        </Route>
+        </RouterHookView>
     </Router>
 );
 
