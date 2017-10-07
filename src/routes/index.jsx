@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// eslint-disable-next-line
 import { BrowserRouter as Router, Route, Link, Switch, withRouter } from 'react-router-dom';
 
 import CoreLayout from '../layout/CoreLayout';

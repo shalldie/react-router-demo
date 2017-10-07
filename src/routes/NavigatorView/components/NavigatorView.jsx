@@ -23,7 +23,7 @@ export default class NavigatorView extends Component {
         return (
             <div className="navigator-view">
                 {
-                    this.state.list.map((item, key) => (
+                    list.map((item, key) => (
                         <Link to={item.link} className="nav-view-wrap" key={key}>
                             <div className="rotate-wrap">
                                 <div className="nav-view-item">

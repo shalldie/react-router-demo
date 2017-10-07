@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+// eslint-disable-next-line
 import { Switch, Route } from 'react-router-dom';
 
 import About from './About';
