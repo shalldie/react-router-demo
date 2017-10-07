@@ -44,7 +44,7 @@ const BasicRoutes = () => (
             {/* 页面外部容器 */}
             <CoreLayout>
                 <Switch>
-                    <Route path="/" exact component={NavigatorView} onEnter={routerHook} />
+                    <Route path="/" exact component={NavigatorView} />
                     <Route path="/home" component={Home} />
                     <Route path="/todolist" component={TodoList} />
                     <Route component={PageNotFound} />
