@@ -1,3 +1,3 @@
-import NavigatorView from './components/NavigatorView';
+import NavigatorView from './src/NavigatorView';
 
 export default NavigatorView;
