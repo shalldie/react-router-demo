@@ -1,31 +1,42 @@
 {
-  "name": "my-app",
+  "name": "analysis-app",
   "version": "0.1.0",
-  "private": true,
+  "main": "main.js",
   "dependencies": {
-    "antd": "^2.13.0",
-    "nprogress": "^0.2.0",
-    "prop-types": "^15.5.10",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-redux": "^5.0.6",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.13",
-    "redux": "^3.7.2",
-    "redux-actions": "^2.2.1"
+    "@types/jest": "24.0.17",
+    "@types/node": "12.7.1",
+    "@types/react": "16.9.1",
+    "@types/react-dom": "16.8.5",
+    "antd": "^3.21.4",
+    "electron": "^6.0.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "3.1.0",
+    "typescript": "3.5.3"
   },
   "scripts": {
-    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
-    "start-js": "react-app-rewired start",
-    "start": "npm-run-all -p watch-css start-js",
-    "build": "npm run build-css &&  react-app-rewired build",
-    "test": "react-app-rewired test --env=jsdom"
+    "dev:electron": "electron .",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "babel-plugin-import": "^1.4.0",
-    "node-sass-chokidar": "^0.0.3",
-    "npm-run-all": "^4.1.1",
-    "react-app-rewired": "^1.2.5"
+    "node-sass": "^4.12.0"
   }
 }
