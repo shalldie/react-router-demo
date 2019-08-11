@@ -15,7 +15,7 @@
     "typescript": "3.5.3"
   },
   "scripts": {
-    "dev:electron": "electron .",
+    "dev": "concurrently 'npm start' 'electron .' ",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
