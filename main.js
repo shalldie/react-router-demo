@@ -30,7 +30,7 @@ function createWindow() {
     // }
 
     if (process.env.NODE_ENV !== 'production') {
-        mainWindow.loadURL(`http://localhost:3000`);
+        mainWindow.loadURL('http://localhost:3000');
     } else {
         mainWindow.loadFile(path.join(__dirname, 'build/index.html'));
     }

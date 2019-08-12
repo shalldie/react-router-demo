@@ -15,7 +15,7 @@
     "typescript": "3.5.3"
   },
   "scripts": {
-    "dev": "concurrently 'npm start' 'electron .' ",
+    "dev": "concurrently 'npm start' 'sleep 5 && electron .' ",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^4.1.1",
     "node-sass": "^4.12.0"
   }
 }
